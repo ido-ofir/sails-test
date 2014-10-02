@@ -36,7 +36,10 @@ module.exports.routes = {
     view: 'lover'
   },
 
-  '/pages/:slug' : 'pages.show'
+  'get /admin/pages' : 'pages.list',
+  'get /admin/pages/:id' : 'pages.edit'
+
+  // '/pages/:slug' : 'pages.show'
 
   /***************************************************************************
   *                                                                          *

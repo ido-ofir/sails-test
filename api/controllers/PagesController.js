@@ -6,20 +6,20 @@
  */
 
 module.exports = {
-    list : function () {
+    list : function (req, res, next) {
         Pages.find({})
             .exec(function (err, pages) {
-                res.view('pages/koko', {
+                res.view('pages/list', {
                     pages : pages
                 });
             });
     },
-
-	show : function (req, res, next) {
-        Pages.findOne({ slug : req.param('slug') })
+    
+    edit : function (req, res, next) {
+        Pages.findOne({ id : req.param('id') })
             .exec(function (err, page) {
                 // console.log(page);
-                res.view('pages/koko', {
+                res.view('pages/edit', {
                     page : page
                 });
             });
