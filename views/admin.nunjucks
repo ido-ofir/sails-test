@@ -2,6 +2,6 @@
 
 {% block body %}
 <div ng-app="admin" class="container">
-s
+    <ui-view></ui-view>
 </div>
 {% endblock %}

@@ -1,0 +1,27 @@
+<h1>KOKO Love</h1>
+<div ui-view>
+    
+    <table class="table">
+            <thead>
+                <th>Id</th>
+                <th style="width: 50%">Name</th>
+                <th>Parent</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tr ng-repeat="page in pages">
+                <td>{{page.id}}</td>
+                <td>{{page.name}}</td>
+                <td>
+                    {{page.parent}}
+                </td>
+                <td>
+                    <a ui-sref="page.edit({ id : page.id })">עריכה</i>
+                </td>
+                <td>
+                    <i>מחיקה</i>
+                </td>
+            </tr>
+    </table>
+
+</div>
