@@ -33,11 +33,16 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'lover'
+    view: 'homepage'
   },
 
-  'get /admin/pages' : 'pages.list',
-  'get /admin/pages/:id' : 'pages.edit'
+  '/admin': {
+    view : 'admin'
+  },
+
+  'get /admin/page' : 'page.list',
+  'get /admin/page/:id' : 'page.edit',
+  'post /admin/page/update/:id' : 'page.update'
 
   // '/pages/:slug' : 'pages.show'
 

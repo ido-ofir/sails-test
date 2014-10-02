@@ -37,11 +37,9 @@
 
   <body>
   
-    <div class="container">
-      {% block body %}
-      {% endblock %}
-    </div>
-
+    {% block body %}
+    {% endblock %}
+    
     <!--
         Client-side Templates
         ========================

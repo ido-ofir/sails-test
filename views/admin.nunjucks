@@ -1,0 +1,7 @@
+{% extends 'views/layout.nunjucks' %}
+
+{% block body %}
+<div ng-app="admin" class="container">
+s
+</div>
+{% endblock %}

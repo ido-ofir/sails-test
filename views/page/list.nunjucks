@@ -1,0 +1,36 @@
+{% extends 'views/layout.nunjucks' %}
+
+{% block body %}
+
+    <h1>KOKO Love</h1>
+
+    <table class="table">
+            <thead>
+                <th>Id</th>
+                <th style="width: 50%">Name</th>
+                <th>Parent</th>
+                <th></th>
+                <th></th>
+            </thead>
+        {% for page in pages %}
+            <tr>
+                <td>{{page.id}}</td>
+                <td>{{page.name}}</td>
+                <td>
+                    {{page.parent.id}}
+                </td>
+                <td>
+                    <a href="/admin/page/{{page.id}}">עריכה</i>
+                </td>
+                <td>
+                    <i>מחיקה</i>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+
+
+
+

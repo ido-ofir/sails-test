@@ -5,7 +5,7 @@
 
     <h1>Edit Page</h1>
 
-    <form role="form" action="/pages/update/{{page.id}}" method="post">
+    <form role="form" action="/admin/page/update/{{page.id}}" method="post">
       <div class="form-group">
         <label>Name</label>
         <input value="{{page.name}}" name="name" type="text" class="form-control">
@@ -17,6 +17,17 @@
       <div class="form-group">
         <label>Template</label>
         <input value="{{page.template}}" name="template" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Parent ({{page.parent.id}} - {{page.parent.name}})</label>
+        
+        <select name="parent" class="form-control">
+          <option value="">root</option>
+          {% for otherPage in otherPages %}
+          <option value="{{otherPage.id}}">{{otherPage.id}} - {{otherPage.name}}</option>
+          {% endfor %}
+        </select>
+
       </div>
       <div class="form-group">
         <label>Content</label>
